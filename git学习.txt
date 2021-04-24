@@ -1,0 +1,60 @@
+# git 本地仓库
+'''
+1)安装git软件,并注册一个GitHub账号
+2)在电脑上创建一个文件夹"edager2021",打开git bash终端
+3)git config --global user.name "edager2020"               在git中配置GitHub的用户名
+4)git config --global user.email "fangyihui2008@163.com"   在git中配置GitHub 绑定的邮箱
+5)cd命令将工作目录切换到 2) 所建的文件夹路劲下(注意该终端是模拟Linux的终端,跟windows有区别,要注意路径格式写法)
+6)git init  将该目录设定为git可以管理的仓库
+7)在edager2021目录下手动创建一个叫"git学习.txt"的文件
+8)git add git学习.txt     将文件添加到仓库中
+9)git commit -m "第一次提交"   将文件提交到仓库
+'''
+
+'''
+git status  查看仓库当前状态
+git diff    查看修改的内容
+git log     显示从最近到最远的提交日志
+git log --pretty=oneline
+'''
+
+'''
+git reset --hard HEAD^          回退到上一个版本
+git reset --hard HEAD^^         回退到上上个版本
+git reset --hard HEAD~100       回退到上100版本
+git reset --hard 版本号          回退到具体版本
+
+git reflog  记录每一次命令
+'''
+
+# github 远程仓库
+'''
+连接远程仓库
+1)在git终端输入 ssh-Keygen -t rsa -C "github的注册邮箱"                创建 SSH Key
+2)cd 进入.ssh所在目录下
+3)cat id_rsa.pub      获取公钥数据
+4)登录github-->setting-->SSH and GPG keys
+5)将公钥数据粘贴到new ssh key 里面
+6)ssh -T git@github.com         测试公钥设置是否成功
+
+创建远程仓库
+1)进入GitHub-->左上角猫头-->new      开始创建远程仓库
+2)进入上面刚创建的仓库--> <>Code --> Code --> SSH 复制远程仓库地址
+3)git remote add origin 远程仓库地址        实现本地电脑关联远程仓库        git remote rm origin 为删除关联
+4)git push origin main                 推送本地仓库内容到远程仓库
+5)git pull origin main --allow-unrelated-histories                    拉取远程仓库内容到本地仓库
+
+git clone 远程库地址                         将远程库克隆到本地
+'''
+
+# 创建分支
+'''
+git branch 分支名              创建分支
+git checkout 分支名            切换分支
+git checkout -b 分支名         创建与切换分支同时进行
+git branch                    列出分支,当前分支前面会有一个*号
+'''
+
+
+
+
