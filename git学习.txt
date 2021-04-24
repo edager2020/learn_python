@@ -53,6 +53,10 @@ git branch 分支名              创建分支
 git checkout 分支名            切换分支
 git checkout -b 分支名         创建与切换分支同时进行
 git branch                    列出分支,当前分支前面会有一个*号
+
+
+
+
 '''
 
 
