@@ -56,9 +56,28 @@ git branch                    列出分支,当前分支前面会有一个*号
 '''
 # 合并分支
 '''
-git merge 分支名       把其他分支成果合并到master分支上,先把分支切换到master
-
+git merge 分支名       把其他分支成果合并到main分支上,先把分支切换到main
+git log --graph       查看分支合并图
 '''
+# 注意:每次从GitHub重新克隆下来的都只有主分支,如果需要使用GitHub的其他分支,则需要在本来重新创建一个对应的分支,然后进入该分支用pull进行下来
+# 删除分支
+'''
+git branch -d 分支名               删除本地分支
+git push origin :分支名            删除远程分支
+git push origin --delete 分支名    删除远程分支
+'''
+# 标签管理
+'''
+git tag 标签名                     打标签
+git tag                           查看所有标签
+git tag 标签名 commitID            指定commit id 打标签
+git tag -a 标签名 -m "标签信息"      指定标签信息
+git checkout 标签名                切换到指定标签
+git show 标签名                    查看说明文字
+git tag -d 标签名                  删除标签
+git push origin 标签名             推送标签到远程
+git push origin --tags            一次性推送全部尚未推送到远程的本地标签
 
-
+删除已推送到远程的标签    先从本地删除 'git tag -d 标签名' 再从远程删除 'git push origin :refs/tags/标签名'
+'''
 
